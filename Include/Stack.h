@@ -13,31 +13,26 @@ typedef Link Stack;
 /*
  *初始化栈stack，为其分配空间
  */
-Status stack_init(Stack *stack);
+extern Status stack_init(Stack *stack);
 
 /*
  *清空栈stack，释放空间
  */
-Status stack_clear(Stack *stack);
+extern Status stack_clear(Stack *stack);
 
 /*
  *完全销毁栈stack，释放空间
  */
-Status stack_destory(Stack *stack);
-
-/*
- *判断栈stack是否为空
- */
-bool is_empty(Stack *stack);
+extern Status stack_destory(Stack *stack);
 
 /*
  *压栈操作，将music压入栈顶
  */
-Status stack_push(Stack *stack, Music *music);
+extern Status stack_push(Stack *stack, Music *music);
 
 /*
  *将栈顶元素弹出，并传递给music
  */
-Status stack_pop(Stack *stack, Music *music);
+extern Status stack_pop(Stack *stack, Music *music);
 
 #endif

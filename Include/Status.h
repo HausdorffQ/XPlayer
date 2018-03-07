@@ -9,4 +9,5 @@
 #define ERROR       0   //错误   
 #define INFEASIBLE -1   //未能实行
 #define OVERFLOW   -2   //溢出
+#define Status      int
 #endif

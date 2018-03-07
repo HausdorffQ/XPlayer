@@ -1,2 +1,0 @@
-PROJIET(XPlayer)
-INCLUDE_DIRECTORIES(./include)

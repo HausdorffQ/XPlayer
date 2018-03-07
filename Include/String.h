@@ -6,7 +6,6 @@
 #ifndef STRING_H
 #define STRING_H
 #include"Status.h"
-typedef int Status;
 
 /*
  *定义String结构体

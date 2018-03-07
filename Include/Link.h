@@ -7,8 +7,8 @@
 #define LINK_H
 #include"Music.h"
 #include"Status.h"
-typedef int Status;
-
+#define POSITION unsigned int 
+#define LENGTH   unsigned int 
 
 /*
  *定义链表节点

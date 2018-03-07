@@ -7,8 +7,7 @@
 #ifndef STACK_H
 #define STACK_H
 #include "Link.h"
-typedef int Status;
-typedef Link Stack;
+#define Stack Link
 
 /*
  *初始化栈stack，为其分配空间

@@ -7,8 +7,7 @@
 #ifndef QUEUE_H
 #define QUEUE_H
 #include "Link.h"
-typedef int Status;
-typedef Link Queue;
+#define Queue Link
 
 /*
  *初始化队列queue，为其分配空间
@@ -28,11 +27,11 @@ extern Status queue_destory(Queue *queue);
 /*
  *将元素music入队列
  */
-extern Status queue_in(Queue *queue,Music *music);
+extern Status queue_in(Queue *queue, Music *music);
 
 /*
  *将队列头元素出列并传递给music
  */
-extern Status queue_out(Queue *queue,Music *music);
+extern Status queue_out(Queue *queue, Music *music);
 
 #endif

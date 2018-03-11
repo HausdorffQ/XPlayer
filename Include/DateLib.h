@@ -1,28 +1,24 @@
 /******************************************************************************
  * 作者：朱清豪                                                                
  * 时间：2018.3.9                                                             
- * 描述：定义了一个以链表结构实现的顺序表，声明了与顺序表相关的操作             
+ * 描述：            
  *****************************************************************************/
 #ifndef DATELIB_H
 #define DATELIB_H
 #include "Music.h"
 #include "Queue.h"
 #include <stdio.h>
+#include <string.h>
 
 /*
  *声明一个全局变量，存储歌曲库的路径
  */
-extern String lib_addr;
+extern char *lib_addr;
 
 /*
  *将歌曲库的路径初始化
  */
-extern Status lib_addr_init();
-
-/*
- *将歌曲库的路径更改为new_addr
- */
-extern Status lib_addr_change(String *new_addr);
+extern Status lib_addr_init(char *addr);
 
 /*
  *初始化歌曲库
@@ -50,9 +46,9 @@ extern Status lib_sort();
 extern Status lib_serch(String *key_word,
                         Queue *result);
 
- /*
+/*
  *按照歌曲名name搜索歌曲库，将结果放入队列result中
- */                       
+ */
 extern Status lib_serch_name(String *name,
                              Queue *result);
 

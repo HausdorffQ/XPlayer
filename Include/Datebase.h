@@ -9,12 +9,12 @@
 #define DATEBASE_H
 #include "Music.h"
 #include "Status.h"
-#define ADDRESS char *
-
+#endif
+#define addr_length 50
 /*
  *Datebase文件存储的绝对路径
  */
-extern ADDRESS datebase_addr;
+extern char datebase_addr[addr_length];
 
 /*
  *Datebase中存储的所有歌曲的总数
@@ -22,10 +22,16 @@ extern ADDRESS datebase_addr;
 extern unsigned long long datebase_total;
 
 /*
- *在路径init_addr位置创建Datebase文件并初始化
+ *将全局变量datebase_addr设置为addr(注意addr是一个文件夹
+ *的绝对地址，需要用字符串拼接将其拼接成完整路径)
+ */
+extern Status datebade_set_addr(char addr[addr_length]); 
+
+/*
+ *创建Datebase文件并初始化
  *datebase_addr以及datebase_total.
  */
-extern Status datebase_init(ADDRESS init_addr);
+extern Status datebase_init();
 
 /*
  *将存储类型的歌曲add_song写入Datebase文件
@@ -44,4 +50,4 @@ extern Status datebase_delete(int position);
 extern Status datebase_local(int position,
                              LIBDATE song);
 
-#endif
+

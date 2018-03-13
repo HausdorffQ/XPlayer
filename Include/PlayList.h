@@ -9,6 +9,7 @@
 #include "Queue.h"
 #include "Stack.h"
 #define ADDRESS char *
+#endif
 
 /*
  *定义一个结构体数据类型PALY_LIST
@@ -62,4 +63,3 @@ extern Status play_list_update_cache(PLAY_LIST *pl,
 extern Status play_list_load_cache(PLAY_LIST *PL,
                                    ADDRESS addr);
 
-#endif

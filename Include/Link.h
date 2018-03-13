@@ -5,23 +5,25 @@
  *****************************************************************************/
 #ifndef LINK_H
 #define LINK_H
-#include"Music.h"
-#include"Status.h"
-#define POSITION unsigned int 
-#define LENGTH   unsigned int 
+#include "Status.h"
+#define POSITION unsigned int
+#define LENGTH unsigned int
+#endif
 
 /*
  *定义链表节点
  */
-typedef struct link_node{
-    Music *music;
+typedef struct link_node
+{
+    unsigned int node;
     struct link_node *next;
-} link_node, link_node;
+} link_node;
 
 /*
  *定义链表
  */
-struct Link{
+struct Link
+{
     link_node *head;
     link_node *tail;
     unsigned int length;
@@ -45,17 +47,17 @@ extern Status link_destory(Link *link);
 /*
  *判断顺序表是否为空
  */
-extern bool   is_empty(Link *link);
+extern bool is_empty(Link *link);
 
 /*
- *在link表尾增加一个元素music
+ *在link表尾增加一个元
  */
-extern Status link_push(Link *link, Music *music);
+extern Status link_push(Link *link, unsigned int *node);
 
 /*
- *把link表尾元素赋值给music并且，删除表尾元素
+ *把link表尾元素赋值给node并且，删除表尾元素
  */
-extern Status link_pop(Link *link,Music *music);
+extern Status link_pop(Link *link, unsigned int *node);
 
 /*
  *交换顺序表link中第a个元素与第b个元素
@@ -63,12 +65,15 @@ extern Status link_pop(Link *link,Music *music);
 extern Status link_swap(Link *link, unsigned int a, unsigned int b);
 
 /*
- *在顺序表link的第n个元素后插入元素music
+ *在顺序表link的第n个元素后插入元素
  */
-extern Status link_insert(Link *link, unsigned int n, Music *music);
+extern Status link_insert(Link *link, unsigned int n, unsigned int node);
 
 /*
  *删除顺序表中的第n个元素
  */
 extern Status link_delate(Link *link, unsigned int n);
-#endif
+
+extern Status link_local(Link *link, unsigned int position,unsigned int *val);
+
+

@@ -8,6 +8,7 @@
 #define QUEUE_H
 #include "Link.h"
 #define Queue Link
+#endif
 
 /*
  *初始化队列queue，为其分配空间
@@ -34,4 +35,3 @@ extern Status queue_in(Queue *queue, Music *music);
  */
 extern Status queue_out(Queue *queue, Music *music);
 
-#endif

@@ -6,6 +6,7 @@
 #ifndef STRING_H
 #define STRING_H
 #include"Status.h"
+#endif
 
 /*
  *定义String结构体
@@ -27,7 +28,7 @@ Status str_init(String *str, char *c);
 /*
  *获得字符串str的长度
  */
-unsigned int str_length(String *str);
+unsigned int str_length(int length);
 
 /*
  *判断str是否为空
@@ -49,4 +50,3 @@ Status str_append(String *base, String *add);
  */
 String str_sub(String *str, unsigned int base, int size);
 
-#endif

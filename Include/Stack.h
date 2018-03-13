@@ -8,6 +8,7 @@
 #define STACK_H
 #include "Link.h"
 #define Stack Link
+#endif
 
 /*
  *初始化栈stack，为其分配空间
@@ -34,4 +35,3 @@ extern Status stack_push(Stack *stack, Music *music);
  */
 extern Status stack_pop(Stack *stack, Music *music);
 
-#endif
